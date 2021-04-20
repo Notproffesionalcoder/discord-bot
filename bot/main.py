@@ -7,7 +7,7 @@ TOKEN = os.getenv("TOKEN")
     
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Listening('!support'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name='!support'))
     print(f"Logged in as {client.user.name}")
     print(f"Bot ID: {client.user.id}")
     
