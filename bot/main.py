@@ -6,7 +6,9 @@ TOKEN = os.getenv("TOKEN")
 
 @bot.event
 async def on_ready():
-    print(f"Logged in as {bot.user.name} ({bot.user.id})")
+    await bot.change_presence(status=discord.Status.active, activity.Listening("!test")
+    print(f"Logged in as {bot.user.name} 
+    print(f"Bot ID: {bot.user.id})")
 
 @bot.command()
 async def test(ctx):
