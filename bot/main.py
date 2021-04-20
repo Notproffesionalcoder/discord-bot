@@ -7,9 +7,13 @@ TOKEN = os.getenv("TOKEN")
     
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.online, activity=discord.Game('!test'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Listening('!help'))
     print(f"Logged in as {client.user.name}")
     print(f"Bot ID: {client.user.id}")
+    
+@client.command()
+async def help(ctx):
+    await ctx.send("List of commands: `!test`")
     
 @client.command()
 async def test(ctx):
