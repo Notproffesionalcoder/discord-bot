@@ -25,7 +25,7 @@ async def test(ctx):
     
 @client.command()
 async def ping(ctx):
-    await ctx.send(f"{client.latency} ")
+    await ctx.send(f'{round(client.latency * 1000)}ms')
 
 if __name__ == "__main__":
     client.run(TOKEN)
