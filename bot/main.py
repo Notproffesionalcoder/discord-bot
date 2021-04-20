@@ -13,7 +13,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`")
+    await ctx.send("List of commands: `!test`, `!source`, `!ping`")
     
 @client.command()
 async def source(ctx):
@@ -22,6 +22,10 @@ async def source(ctx):
 @client.command()
 async def test(ctx):
     await ctx.send("Tested! It works!")
+    
+@client.command()
+async def ping(ctx):
+    await ctx.send(f'{bot.latency} ')
 
 if __name__ == "__main__":
     client.run(TOKEN)
