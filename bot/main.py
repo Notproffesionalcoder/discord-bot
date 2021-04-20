@@ -15,4 +15,4 @@ async def test(ctx):
     await ctx.send("Tested! It works!")
 
 if __name__ == "__main__":
-    bot.run(TOKEN)
+    client.run(TOKEN)
