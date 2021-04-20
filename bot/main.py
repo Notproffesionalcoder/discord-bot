@@ -6,9 +6,8 @@ TOKEN = os.getenv("TOKEN")
     
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.active, activity=discord.Game("!test"))
+    await client.change_presence(status=discord.Status.active, activity=discord.Game('!test'))
     print("Logged in as Bot")
-    print("Custom Status Activated")
     
 @client.command()
 async def test(ctx):
