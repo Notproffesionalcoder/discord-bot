@@ -6,12 +6,11 @@ TOKEN = os.getenv("TOKEN")
     
 @client.event
 async def on_ready():
-    print(f"Logged in as {client.user.name}")
-    print(f"Bot ID: {client.user.id})")
-
-@client.event
-async def on_ready():
     await client.change_presence(status=discord.Status.active, activity=discord.Game("!test"))
+    name = client.user.name
+    botid = client.user.id
+    print(f"Logged in as {}".format(name))
+    print(f"Bot ID: {}".format(botid))
     print("Custom Status Activated")
     
 @client.command()
