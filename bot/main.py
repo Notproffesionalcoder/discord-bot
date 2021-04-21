@@ -26,8 +26,13 @@ async def test(ctx):
     await ctx.send("Tested! It works!") 
    
 @client.command()
-async def say(ctx, message):
-    await ctx.send(f'{ctx.author.name} said {message}')
+async def say(ctx, mesage, message = None):
+
+	if message = None:
+		await ctx.send("Please mention what you want me to say. For example, `!say hi`")
+		return
+
+ 	await ctx.send(f"{ctx.author.name} said {message}")
     
 @client.command()
 async def ping(ctx):
