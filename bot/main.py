@@ -45,8 +45,8 @@ async def meme(ctx):
 	
 @client.command
 async def q(ctx):
-	randomlist = ["yes","no",]
-	await ctx.send(message.channel,(random.choice(randomlist)))
+	computer = random.randomlist["yes","no",]
+	await ctx.send(message.channel,(random.choice(computer)))
 
 @client.command()
 async def guessthenumber(ctx):
