@@ -22,12 +22,16 @@ async def source(ctx):
     await ctx.send("This Bot is made by TheYoBots. Checkout the source code here: https://github.com/TheYoBots/discord-bot")
     
 @client.command()
-async def test(ctx):
+async def test(ctx, message):
     await ctx.send("Tested! It works!")
     
 @client.command()
+async def say(ctx):
+    await ctx.send(f'{ctx.author.name} said {message}')
+    
+@client.command()
 async def ping(ctx):
-    await ctx.send(f"{round(client.latency * 1000)}ms 🏓")
+    await ctx.send(f"{round(author.latency * 1000)}ms 🏓")
 
 @client.command(pass_context=True)
 async def meme(ctx):
