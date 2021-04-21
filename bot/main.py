@@ -15,7 +15,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!say`, `!ping`, `!meme`")
+    await ctx.send("List of commands: `!test`, `!source`, `!say <value>`, `!ping`, `!meme`")
     
 @client.command()
 async def source(ctx):
@@ -23,11 +23,7 @@ async def source(ctx):
     
 @client.command()
 async def test(ctx):
-    await ctx.send("Tested! It works!")
-    
-@client.command()
-async def say(ctx):
-    await ctx.send("Make sure you mention what I need to say. For example, `!say hi`.") 
+    await ctx.send("Tested! It works!") 
    
 @client.command()
 async def say(ctx, message):
