@@ -3,10 +3,6 @@ import aiohttp
 import random
 import os
 from discord.ext import commands
-import datetime
-import param
-from urllib import parse, request
-import re
 
 client = commands.Bot(command_prefix="!")
 TOKEN = os.getenv("TOKEN")
@@ -19,7 +15,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!say <value>`, `!ping`, `!sum <x + y>`, `!meme`, `!guessthenumber`")
+    await ctx.send("List of commands: `!test`, `!source`, `!say <value>`, `!ping`, `!meme`, `!guessthenumber`")
     
 @client.command()
 async def source(ctx):
@@ -46,10 +42,6 @@ async def meme(ctx):
             res = await r.json()
             embed.set_image(url=res['data']['children'] [random.randint(0, 25)]['data']['url'])
             await ctx.send(embed=embed)
-
-@client.command()
-async def sum(ctx, numOne: int, numTwo: int):
-    await ctx.send(numOne + numTwo)
 	
 @client.command()
 async def guessthenumber(ctx):
