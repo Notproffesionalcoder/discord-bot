@@ -42,16 +42,6 @@ async def meme(ctx):
             res = await r.json()
             embed.set_image(url=res['data']['children'] [random.randint(0, 25)]['data']['url'])
             await ctx.send(embed=embed)
-	
-answer = {'Yes', 'No', 'Maybe :person_shrugging:'}
-	
-@client.command(pass_context=True)  
-async def q(ctx):
-  answer_copy = answer.copy()
-  for n in [1, 2, 3]:
-      cs = random.sample(answer_copy , k=n)
-      answer_copy -= set(cs)
-      await ctx.send(ctx.message.channel, "{}\n".format(", ".join(cs)))
 
 @client.command()
 async def guessthenumber(ctx):
