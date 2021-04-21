@@ -45,7 +45,7 @@ async def meme(ctx):
 	
 @client.command()
 async def q(ctx):
-	computer = random.randomlist["yes","no",]
+	computer = random.randlist["yes","no",]
 	await ctx.send(message.channel,(random.choice(computer)))
 
 @client.command()
