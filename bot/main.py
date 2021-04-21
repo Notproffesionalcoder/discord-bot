@@ -15,7 +15,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!ping`, `!meme`")
+    await ctx.send("List of commands: `!test`, `!source`, `!say`, `!ping`, `!meme`")
     
 @client.command()
 async def source(ctx):
@@ -26,12 +26,16 @@ async def test(ctx):
     await ctx.send("Tested! It works!")
     
 @client.command()
+async def say(ctx):
+    await ctx.send("Make sure you mention what I need to say. For example, `!say hi`.") 
+   
+@client.command()
 async def say(ctx, message):
     await ctx.send(f'{ctx.author.name} said {message}')
     
 @client.command()
 async def ping(ctx):
-    await ctx.send(f"{round(author.latency * 1000)}ms 🏓")
+    await ctx.send(f"{round(client.latency * 1000)}ms 🏓")
 
 @client.command(pass_context=True)
 async def meme(ctx):
