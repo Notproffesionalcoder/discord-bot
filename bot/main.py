@@ -44,7 +44,7 @@ async def meme(ctx):
             await ctx.send(embed=embed)
 	
 @client.command() 
-async def on_message(message):
+async def q(ctx, message):
     if message.content.startswith("!q"):
         randomlist = ["yes","no",]
         await client.send_message(message.channel,(random.choice(randomlist)))
