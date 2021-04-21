@@ -22,11 +22,11 @@ async def source(ctx):
     await ctx.send("This Bot is made by TheYoBots. Checkout the source code here: https://github.com/TheYoBots/discord-bot")
     
 @client.command()
-async def test(ctx, message):
+async def test(ctx):
     await ctx.send("Tested! It works!")
     
 @client.command()
-async def say(ctx):
+async def say(ctx, message):
     await ctx.send(f'{ctx.author.name} said {message}')
     
 @client.command()
