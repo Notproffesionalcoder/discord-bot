@@ -13,7 +13,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!ping`")
+    await ctx.send("List of commands: `!test`, `!source`, `!ping`, `!meme`")
     
 @client.command()
 async def source(ctx):
@@ -26,6 +26,16 @@ async def test(ctx):
 @client.command()
 async def ping(ctx):
     await ctx.send(f"{round(client.latency * 1000)}ms 🏓")
+
+@client.command(pass_context=True)
+async def meme(ctx):
+    embed = discord.Embed(title="Memes", description="")
+
+    async with aiohttp.ClientSession() as cs:
+        async with cs.get('https://www.reddit.com/r/dankmemes/new.json?sort=hot') as r:
+            res = await r.json()
+            embed.set_image(url=res['data']['children'] [random.randint(0, 25)]['data']['url'])
+            await ctx.send(embed=embed)
 
 if __name__ == "__main__":
     client.run(TOKEN)
