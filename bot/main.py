@@ -43,8 +43,8 @@ async def meme(ctx):
             embed.set_image(url=res['data']['children'] [random.randint(0, 25)]['data']['url'])
             await ctx.send(embed=embed)
 	
-@client.command
-async def question(ctx):
+@client.command()
+async def q(ctx):
 	computer = random.randomlist["yes","no",]
 	await ctx.send(message.channel,(random.choice(computer)))
 
