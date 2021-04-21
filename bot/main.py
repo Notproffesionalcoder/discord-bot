@@ -3,6 +3,10 @@ import aiohttp
 import random
 import os
 from discord.ext import commands
+import datetime
+
+from urllib import parse, request
+import re
 
 client = commands.Bot(command_prefix="!")
 TOKEN = os.getenv("TOKEN")
