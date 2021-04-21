@@ -51,7 +51,7 @@ async def q(ctx):
   for n in [1, 2, 3]:
       cs = random.sample(answer_copy , k=n)
       answer_copy -= set(cs)
-      await client.send_message(ctx.message.channel, "{}\n".format(", ".join(cs)))
+      await ctx.send(ctx.message.channel, "{}\n".format(", ".join(cs)))
 
 @client.command()
 async def guessthenumber(ctx):
