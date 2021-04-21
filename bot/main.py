@@ -43,13 +43,11 @@ async def meme(ctx):
             embed.set_image(url=res['data']['children'] [random.randint(0, 25)]['data']['url'])
             await ctx.send(embed=embed)
 	
-@client.event
+@client.command() 
 async def on_message(message):
     if message.content.startswith("!q"):
         randomlist = ["yes","no",]
         await client.send_message(message.channel,(random.choice(randomlist)))
-    else:
-        await client.process_commands(message)
 
 @client.command()
 async def guessthenumber(ctx):
