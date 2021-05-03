@@ -5,7 +5,7 @@ A simple/basic Discord Bot written in python that can be easily deployed onto he
 ## Cloud Hosting (Heroku)
 
 - Create a [GitHub Account](https://github.com/join?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home) and a [Heroku Account](https://signup.heroku.com).
-- In GitHub `Fork` [this repository](https://github.com/TheYoBots/discord-bot/fork).
+- In GitHub [`Fork` this repository](https://github.com/TheYoBots/discord-bot/fork).
 - Create a [new app](https://dashboard.heroku.com/new-app) in Heroku and select a suitable name for your app (region won't really matter).
 - In your newly created heroku app, go to the `Deploy` tab and under `Deployment method` select `GitHub (Connect to GitHub)`.
 - Then Click on `search` and select (`connect`) your fork of this repository.
