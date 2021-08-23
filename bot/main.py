@@ -15,7 +15,7 @@ async def on_ready():
     
 @client.command()
 async def support(ctx):
-    await ctx.send("List of commands: `!test`, `!source`, `!say <value>`, `!ping`, `!meme`, `!guessthenumber`")
+    await ctx.send("List of commands: `.test`, `.source`, `.say <value>`, `.ping`, `.meme`, `.guessthenumber`.ban`" )
     
 @client.command()
 async def source(ctx):
