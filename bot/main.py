@@ -60,7 +60,7 @@ async def guessthenumber(ctx):
 	
 @client.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
-    await member.ban(reason=reason)on)
+    await member.ban(reason=reason)
             
 if __name__ == "__main__":
     client.run(TOKEN)
