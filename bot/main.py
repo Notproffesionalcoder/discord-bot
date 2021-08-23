@@ -57,7 +57,8 @@ async def guessthenumber(ctx):
         await ctx.send("Correct")
     else:
         await ctx.send(f"Nope it was {computer}")
-	@client.command()
+	
+@client.command()
 async def ban(ctx, member : discord.Member, *, reason=None):
     await member.ban(reason=reason)on)
             
