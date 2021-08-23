@@ -9,7 +9,7 @@ TOKEN = os.getenv("TOKEN")
     
 @client.event
 async def on_ready():
-    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name='!support | By TheYoBots'))
+    await client.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.listening, name='!support | By ~Rishi#0100'))
     print(f"Logged in as {client.user.name}")
     print(f"Bot ID: {client.user.id}")
     
@@ -19,7 +19,7 @@ async def support(ctx):
     
 @client.command()
 async def source(ctx):
-    await ctx.send("This Bot is made by TheYoBots. Checkout the source code here: https://github.com/TheYoBots/discord-bot")
+    await ctx.send("This Bot is made by NotProffesionalCoder. Checkout the source code here: https://github.com/Notproffesionalcoder/discord-bot/")
     
 @client.command()
 async def test(ctx):
