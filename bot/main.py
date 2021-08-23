@@ -57,6 +57,13 @@ async def guessthenumber(ctx):
         await ctx.send("Correct")
     else:
         await ctx.send(f"Nope it was {computer}")
+	@client.event
+async def on_ready():
+   print('Bot is online!')
+
+@client.command()
+async def ban(ctx, member : discord.Member, *, reason=None):
+    await member.ban(reason=reason)
             
 if __name__ == "__main__":
     client.run(TOKEN)
